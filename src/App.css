@@ -1,0 +1,402 @@
+@font-face {
+  font-family: RobotoSlab;
+  src: url(./RobotoSlab-VariableFont_wght.ttf);
+}
+
+#root {
+  font-family: RobotoSlab;
+  height: 100vh;
+  width: 100vw;
+}
+
+.gameboardWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  gap: 1rem;
+  perspective: 1000px;
+}
+
+.cardSidesWrapper {
+  height: clamp(6em, 20vh, 20rem);
+  aspect-ratio: 0.75;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  transition: 
+    transform 300ms ease-in-out,
+    box-shadow 300ms ease-in-out;
+  z-index: 0;
+  transform-style:preserve-3d;
+}
+
+.cardSidesWrapper:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+.rotate {
+  animation: rotate 1s linear;
+  animation-fill-mode: forwards;
+}
+
+.derotate {
+  animation: derotate 1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+  from {
+    transform: translateY(-0.5rem) rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes derotate {
+  from {
+    transform: rotateY(-180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+.backgroundWrapper {
+  height: 90%;
+  width: 88%;
+  background-image: url(./card-back.svg);
+  background-repeat: repeat;
+  border-radius: 0.25rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backgroundWrapper>span {
+  display: none;
+}
+
+.cardBackBorder {
+  height: 80%;
+  width: 75%;
+  box-shadow: 
+    0 0 0 0.2vh white,
+    0 0 0 0.5vh #c70505,
+    0 0 0 0.7vh white;
+  z-index: 2;
+}
+
+.backSide {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: white;
+  border-radius: 0.75rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.frontSide {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  position: absolute;
+  background-color: white;
+  border-radius: 0.75rem;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.cardSidesWrapper {
+  position: relative;
+}
+
+.numberAndSymbolWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3vh;
+  color: #c70505;
+  margin: 0 0.5vh;
+  margin-left: 1vh;
+}
+
+.symbolWrapperOne svg{
+  transform: scale(1.5);
+}
+
+.symbolWrapper svg,
+.symbolWrapper4 svg {
+  transform: scale(1.5);
+}
+
+.symbolCenter9 svg {
+  transform: scale(1.5);
+  padding: 1rem 0
+}
+
+.symbolWrapper svg:last-child {
+  transform: scale(1.5) rotate(180deg);
+}
+
+.cardLeft,
+.cardRight {
+  display: flex;
+}
+
+.fontWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardRight {
+  align-self: flex-end;
+  transform: rotate(180deg);
+}
+
+.symbolWrapper,
+.symbolWrapperOne,
+.symbolWrapper4,
+.symbolWrapper9 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #c70505;
+}
+
+.symbolWrapper4 {
+  justify-content: space-between;
+}
+
+.symbolWrapperOne {
+  justify-content: center;
+}
+
+.symbolWrapper4,
+.symbolWrapper9 {
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+
+.symbolWrapper9 {
+  justify-content: space-between;
+}
+
+.symbolWrapper span {
+  margin-top: -0.5rem;
+}
+
+.symbolWrapper span:last-child {
+  transform: rotate(180deg);
+  margin-bottom: -0.5rem;
+}
+
+.symbolWrapper4 .symbolLeft {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.symbolWrapper9 .symbolLeft svg,
+.symbolWrapper9 .symbolRight svg {
+  transform: scale(1.5);
+}
+
+.symbolWrapper9 .symbolLeft {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.symbolLeft svg:last-child,
+.symbolRight svg:last-child {
+  transform: scale(1.5) rotate(180deg);
+}
+
+.symbolRight {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.symbolCenter,
+.symbolCenter7,
+.symbolCenter8,
+.symbolCenter9,
+.symbolCenter10 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.symbolCenter7 svg:last-child,
+.symbolCenter8 svg:last-child,
+.symbolCenter9 svg:last-child,
+.symbolCenter10 {
+  transform: scale(1.5) rotate(180deg);
+}
+
+.symbolCenter7 svg:first-child,
+.symbolCenter9 svg:first-child {
+  visibility: hidden;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  padding: 4rem 8rem;
+  background-color: rgb(245, 245, 245);
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent h1 {
+  font-family: sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+button {
+  font-family: sans-serif;
+}
+
+.startButton,
+.newGameButton {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-appearance: none;
+  border: 1px solid #ff6868;
+  border-radius: 3rem;
+  padding: 0.75rem 2rem;
+  padding-bottom: 0.7rem;
+  margin: 1rem;
+  color: white;
+  background-color: #e65c5c;
+  box-shadow:
+    0px 0px 8px 2px rgba(255, 255, 255, 0.4), 
+    0px 6px 0px 0px #b62d2d;
+  transition: 
+    box-shadow 300ms ease-in-out,
+    background-color 300ms ease-in-out,
+    color 300ms ease-in-out,
+    transform 300ms ease-in-out,
+    border-color 300ms ease-in-out,
+    padding 300ms ease-in-out; 
+}
+
+.startButton:hover,
+.newGameButton:hover {
+  box-shadow:
+    0px 0px 6px 0px rgba(255, 255, 255, 0.4),
+    0px 0px 0px 0px #b34343;
+  background-color: #ce4f4f;
+  border-color: #ce2d2d;
+  color: rgb(230, 230, 230);
+  transform: translateY(6px);
+}
+
+.startButton:active,
+.newGameButton:active {
+  box-shadow: inset 0px 0.1rem 0px 0px rgba(0, 0, 0, 0.2);
+  color: rgb(210, 210, 210);
+  padding-bottom: 0.6rem;
+  margin-top: 1.1rem;
+}
+
+.fadeOut {
+  animation: fadeOut 400ms linear
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.interfaceWrapper {
+  padding-top: 2.5rem;
+}
+
+.interfaceWrapper span {
+  font-family: sans-serif;
+  font-weight: 200;
+  color:rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 3rem;
+  padding: 0.5rem 2rem;
+  margin: 1rem;
+  background-color: rgb(245, 245, 245);
+  box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}

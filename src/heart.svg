@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="60px"
+   height="60px"
+   viewBox="0 0 30 30"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (1:1.1+202202050950+0a00cf5339)"
+   sodipodi:docname="heart.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="3.1108586"
+     inkscape:cx="350.06413"
+     inkscape:cy="223.08954"
+     inkscape:window-width="3840"
+     inkscape:window-height="2096"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid5614" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       aria-label="♥"
+       transform="scale(1.0064502,0.9935911)"
+       id="text3750"
+       style="font-size:39.5544px;line-height:1.25;stroke-width:0.988872"
+       inkscape:label="text3750">
+      <path
+         d="m 7.8673119,0.75250679 q 3.9206751,0 6.1610611,4.53871301 0.811175,1.7961716 0.849802,2.7425415 h 0.05794 q 0.675979,-3.1288149 2.452836,-5.1953779 2.085877,-2.08587661 4.693223,-2.08587661 4.036557,0 6.47008,4.32626261 0.618038,1.6030349 0.618038,3.012933 0,4.8284176 -4.017244,9.2126216 L 14.936116,29.568506 H 14.820234 L 3.96595,16.261386 Q 0.721253,12.302083 0.721253,8.0917024 q 0,-4.075185 3.8434208,-6.4700803 1.6223485,-0.86911531 3.3026381,-0.86911531 z"
+         id="path5616" />
+    </g>
+  </g>
+</svg>
