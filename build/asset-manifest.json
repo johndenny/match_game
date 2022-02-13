@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/match_game/static/css/main.a0d46010.css",
+    "main.js": "/match_game/static/js/main.ab25d9a2.js",
+    "static/js/787.7fa8ba7d.chunk.js": "/match_game/static/js/787.7fa8ba7d.chunk.js",
+    "static/media/RobotoSlab-VariableFont_wght.ttf": "/match_game/static/media/RobotoSlab-VariableFont_wght.f8b579dbcc1cadfa151b.ttf",
+    "static/media/card-back.svg": "/match_game/static/media/card-back.6e1c83d04dcd44131430.svg",
+    "index.html": "/match_game/index.html",
+    "main.a0d46010.css.map": "/match_game/static/css/main.a0d46010.css.map",
+    "main.ab25d9a2.js.map": "/match_game/static/js/main.ab25d9a2.js.map",
+    "787.7fa8ba7d.chunk.js.map": "/match_game/static/js/787.7fa8ba7d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0d46010.css",
+    "static/js/main.ab25d9a2.js"
+  ]
+}
